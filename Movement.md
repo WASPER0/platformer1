@@ -3,15 +3,15 @@
 ## Name it "PlayerMovement"
 ## Copy & Paste it into C++
 
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    
+    public class PlayerMovement : MonoBehaviour
+    {
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerMovement : MonoBehaviour
-{
     public CharacterController controller;
- 
+
     public float speed = 12f;
     public float gravity = -9.81f * 2;
     public float jumpHeight = 3f;
@@ -53,17 +53,17 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
  
         controller.Move(velocity * Time.deltaTime);
+        }
     }
-}
 
-## After this, Go to file and click 'Save All'
-## 'X' out and go to the 'Player' and drag the movement script into the component area.
-## Click on 'Add Component' and search 'CharacterController'
-## Drag the 'CharacterController' into the CharacterController Section on the Movement script.
-## Create an 'Empty' in the Create section.
-## Rename it "GroundCheck' and attach it to the 'Player' object
-## Put the X, Y & Z Coordinates to 0, then drag it to the feet of the 'Player' object
-## Drag the 'GroundCheck' on the GroundCheck section.
-## Now, you should have a functional walking system for your unity character.
+After this, Go to file and click 'Save All'
+'X' out and go to the 'Player' and drag the movement script into the component area.
+Click on 'Add Component' and search 'CharacterController'
+Drag the 'CharacterController' into the CharacterController Section on the Movement script.
+Create an 'Empty' in the Create section.
+Rename it "GroundCheck' and attach it to the 'Player' object
+Put the X, Y & Z Coordinates to 0, then drag it to the feet of the 'Player' object
+Drag the 'GroundCheck' on the GroundCheck section.
+Now, you should have a functional walking system for your unity character.
 
-## If you need a bit more help / or confused, submit an issue.
+If you need a bit more help / or confused, submit an issue.
